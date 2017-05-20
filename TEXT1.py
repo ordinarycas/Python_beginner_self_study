@@ -5,19 +5,15 @@ Python3 默認就是用 utf-8
 
 #-*- coding: utf-8 -*-
 
-name = input("username:")
-age = int(input("age:")) #型態轉換
-job = input("job:")
-salary = input("salary:")
+import getpass
 
-#字串格式化
+age_of_ironman = 35
 
-info = '''
--------- info of %s --------
-Name: %s
-Age: %d
-Job: %s
-Salary: %s
-''' %(name,name,age,job,salary)
+guess_age = int(input("guess age:"))
 
-print(info)
+if guess_age == age_of_ironman:
+    print("Bingo, You got it!!!")
+elif guess_age > age_of_ironman:
+    print("You may think smaller...")
+else:
+    print("You may think bigger...") 
