@@ -4,10 +4,19 @@ Python3 默認就是用 utf-8
 '''
 
 #-*- coding: utf-8 -*-
-#while回圈
+#while,for回圈
 
+import os
+
+cmd_rea = os.popen("dir d:\ /p /w /o:D").read()
+print("----->",cmd_rea)
+
+'''
 age_of_ironman = 35
 count = 0
+
+for i in range(0,10,2):
+    print("loop-: ",i)
 
 while count < 3:
     guess_age = int(input("guess age:"))
@@ -19,6 +28,8 @@ while count < 3:
     else:
         print("You may think bigger...")
     count +=1
-else:
-    #當count不為真會執行下面這行
-    print("You have tried too many, exit")
+    if count == 3:
+        countine_confirm = input("Do you want to keep go in ? (y/n)")
+        if countine_confirm != 'n':
+            count = 0
+'''
